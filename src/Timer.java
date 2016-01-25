@@ -10,7 +10,7 @@
  * to execute.
  *
  * @author Kyle Laker
- * @version 1/24/16
+ * @version 20160124
  */
 public class Timer {
     private long startTime;

@@ -9,8 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author kyle
- * @version 1/21/16
+ * Provides the prime factorization of a given number.
+ *
+ * @author Kyle Laker
+ * @version 20160124
  */
 public class Factor {
     private static final Map<Long, Long> factors = new HashMap<>();

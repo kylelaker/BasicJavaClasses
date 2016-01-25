@@ -8,8 +8,8 @@
 /**
  * A list of all 50 states (plus DC) and their abbreviations.
  *
- * @author kyle
- * @version 1/20/16
+ * @author Kyle Laker
+ * @version 20160120
  */
 public enum State {
     ALABAMA         ("Alabama",              "AL"),

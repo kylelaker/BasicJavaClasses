@@ -8,8 +8,8 @@
 /**
  * Represents a 10-digit North American phone number.
  *
- * @author Kyle
- * @version 1/20/16
+ * @author Kyle Laker
+ * @version 20160120
  */
 public class PhoneNumber {
     private int areaCode;
