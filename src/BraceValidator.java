@@ -59,7 +59,7 @@ import java.util.Stack;
      * For example:
      *      "[[]]"          Valid
      *      "[[]"           Invalid
-     *      "{[{]"          Invalid
+     *      "{[}]"          Invalid
      *      "{[()[]{}]()}"  Valid
      * 
      * @param s The string against which to perform the validation
