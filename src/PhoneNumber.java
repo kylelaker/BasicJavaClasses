@@ -17,6 +17,10 @@ public class PhoneNumber {
     private int extension;
 
     public PhoneNumber(int areaCode, int exchange, int extension) {
+        if (areaCode > 999 || areaCode <= 200) throw new IllegalArgumentException();
+        if (exchange > 999 || exchange <= 200) throw new IllegalArgumentException();
+        if (extension > 9999 || exchange < 0) throw new IllegalArgumentException();
+
         this.areaCode = areaCode;
         this.exchange = exchange;
         this.extension = extension;
@@ -69,7 +73,7 @@ public class PhoneNumber {
 
         // If the phone number is null, return null
         if (phoneNumber == null) {
-            return null;
+            throw new NullPointerException("Provided phone number was null.");
         }
 
         // Attempt to remove an international code
@@ -82,7 +86,6 @@ public class PhoneNumber {
 
         // Phone numbers must be 10 digits
         if (adjustedPhone.length() == 10 || adjustedPhone.matches("[0-9]*")) {
-
             area = Integer.parseInt(adjustedPhone.substring(0, 3));
             exchange = Integer.parseInt(adjustedPhone.substring(3, 6));
             extension = Integer.parseInt(adjustedPhone.substring(6, 10));
