@@ -21,7 +21,7 @@ public class Factor {
      * Provides the factors of a given number.
      * @param n The number to factorize
      */
-    private static void factorize(long n) {
+    public static void factorize(long n) {
         long q = n, t = 2;
         while (t <= Math.sqrt(q))
             if (q % t == 0) {
@@ -40,7 +40,7 @@ public class Factor {
         factors.put(k, factors.containsKey(k) ? factors.get(k) + 1L : 1L);
     }
 
-    public Map<Long, Long> getFactors() {
+    public static Map<Long, Long> getFactors() {
         return factors;
     }
 }
