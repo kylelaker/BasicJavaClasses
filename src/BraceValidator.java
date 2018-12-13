@@ -74,7 +74,7 @@ import java.util.ArrayDeque;
                 return false;
             }
         }
-        return stack.empty();
+        return stack.isEmpty();
     }
 
 }
