@@ -12,9 +12,9 @@
  * @version 20160120
  */
 public class PhoneNumber {
-    private int areaCode;
-    private int exchange;
-    private int extension;
+    private final int areaCode;
+    private final int exchange;
+    private final int extension;
 
     public PhoneNumber(int areaCode, int exchange, int extension) {
         if (areaCode > 999 || areaCode <= 200) throw new IllegalArgumentException();
