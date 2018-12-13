@@ -23,12 +23,17 @@ public class Factor {
      */
     public static void factorize(long n) {
         long q = n, t = 2;
-        while (t <= Math.sqrt(q))
+        while (t <= Math.sqrt(q)) {
             if (q % t == 0) {
-                addKey(t);
+                addFactor(t);
                 q /= t;
-            } else t++;
-        if (q != n) addKey(q);
+            } else {
+                t++;
+            }
+        }
+        if (q != n) {
+            addFactor(q);
+        }
     }
 
     /**
@@ -36,7 +41,7 @@ public class Factor {
      * value by 1.
      * @param k The key to add to the map.
      */
-    private static void addKey(long k) {
+    private static void addFactor(long k) {
         factors.put(k, factors.containsKey(k) ? factors.get(k) + 1L : 1L);
     }
 
