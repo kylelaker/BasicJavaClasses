@@ -5,7 +5,7 @@
  * of the MIT license.  See the LICENSE file for details.
  */
 
-import java.util.Stack;
+import java.util.ArrayDeque;
 
 /**
  * A utility class used for verifiy whether a string is a valid series
@@ -66,10 +66,14 @@ import java.util.Stack;
      * @return true if the string is valid, false otherwise
      */
     public static boolean validate(String s) {
-        Stack<Character> stack = new Stack<>();
-        for (char c : s.toCharArray())
-            if (isOpening(c))                   stack.push(c);
-            else if (!matches(stack.pop(), c))  return false;
+        ArrayDeque<Character> stack = new ArrayDeque<>();
+        for (char c : s.toCharArray()) {
+            if (isOpening(c)) {
+                stack.push(c);
+            } else if (!matches(stack.pop(), c)) {
+                return false;
+            }
+        }
         return stack.empty();
     }
 
