@@ -64,8 +64,8 @@ public enum State {
     WISCONSIN       ("Wisconsin",            "WI"),
     WYOMING         ("Wyoming",              "WY");
 
-    private String name;
-    private String abbreviation;
+    private final String name;
+    private final String abbreviation;
 
     State(String name, String abbreviation) {
         this.name = name;
